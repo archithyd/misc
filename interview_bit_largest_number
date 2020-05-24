@@ -1,0 +1,24 @@
+A = [3, 30, 34, 5, 9]
+
+val = ""
+lis_with_same_val = []
+lis = []
+dum = 0
+
+for i in A:
+    if i%10 == i:
+        print("hi")
+        A.append(str(i*10+1))
+    else:
+        A.append(str(i))
+
+print(A)
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,25 @@
+n = int(input())
+lis = list(map(int,input().split()))
+count=0
+i = 0
+val = min(lis)
+while i<n-1:
+    if lis[i]>lis[i+1]:
+        if lis[i+1] == val:
+            temp = lis[i+1]
+            lis[i+1] = lis[i]
+            lis[i] = temp
+
+        else:
+            j = i
+            while j!=val:
+                temp = lis[j]
+                lis[i] = lis[j]
+                lis[j] = temp
+        count+=1
+        i=0
+    else:
+        i+=1
+
+print(count)
+
